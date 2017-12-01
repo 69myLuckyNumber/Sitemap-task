@@ -15,10 +15,22 @@
 .dl-horizontal dt {
     white-space: normal;
 }
-
+z
 /* Set width on the form input elements since they're 100% wide by default */
 input,
 select,
 textarea {
     max-width: 280px;
+}
+.progress {
+    position: relative;
+}
+
+.progress span {
+    position: absolute;
+    left: 0;
+    width: 100%;
+    text-align: left;
+    z-index: 2;
+    color: black;
 }

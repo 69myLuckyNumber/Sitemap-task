@@ -1,0 +1,24 @@
+﻿@model SitemapTask.Models.HomeViewModel
+@{
+    ViewBag.Title = "Index";
+}
+
+@Html.Partial("_UrlView", Model.UrlModel)
+<hr>
+@if (Model != null)
+{
+    <div class="row">
+        @foreach (var history in Model.HistoryCards)
+        {
+            @Html.Partial("_HistoryCardView", history)
+        }
+    </div>
+}
+
+else
+{
+    <div class="row">
+        <h3>History section.</h3>
+    </div>
+}
+<hr>

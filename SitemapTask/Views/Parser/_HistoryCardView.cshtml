@@ -1,0 +1,10 @@
+﻿@model SitemapTask.Models.HistoryCardViewModel
+<div class="col-sm-4">
+    <div class="panel panel-default">
+        <div class="panel-body">
+            <h4 class="card-title"><a href="@Model.Hostname">@Model.Hostname</a></h4>
+            <p class="card-text">@Model.Date.ToString("F")</p>
+            <a href="@Url.Action("History", "Parser", new { id = Model.Id })" class="btn btn-primary">Details</a>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,12 @@
+﻿@model SitemapTask.Models.UrlModel
+
+@using (Html.BeginForm("Index", "Parser", FormMethod.Post))
+{
+
+    <div class="form-group">
+        @Html.LabelFor(m => Model.Url)
+        @Html.TextBoxFor(m => Model.Url, new { @placeholder = "https://www.example.com", @class = "form-control" })
+        @Html.ValidationMessageFor(m => Model.Url,null, new { @class="text-danger" })
+    </div>
+    <button type="submit" class="btn btn-default">Submit</button>
+}
